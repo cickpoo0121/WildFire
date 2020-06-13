@@ -1,0 +1,122 @@
+
+//=========User========
+
+### newest sheet
+get http://localhost:8080/newestsheet
+Content-Type: application/json
+
+### sheet preview
+get http://localhost:8080/sheetpreview/1
+Content-Type: application/json
+
+###
+get http://localhost:8080/sheetrecom/19
+Content-Type: application/json
+
+### uploadsheet
+post http://localhost:8080/uploadsheet1
+//real upload
+Content-Type: application/json
+
+{
+   "File_name":"math.doc",
+   "Queue":"1"
+}
+
+### show all sheet of admin upload
+get http://localhost:8080/userselect
+Content-Type: application/json
+
+### Get history
+get http://localhost:8080/usertask/21
+Content-Type: application/json
+
+### cancel
+put http://localhost:8080/cancel/6
+Content-Type: application/json
+
+
+
+//=========Admin========
+
+### Get sheet request
+get http://localhost:8080/request
+Content-Type: application/json
+
+### Get sheet request
+g-et http://localhost:8080/downloadsheet/5
+Content-Type: application/json
+
+
+### download
+put http://localhost:8080/download/6
+Content-Type: application/json
+
+### confirm
+put http://localhost:8080/confirm/5
+Content-Type: application/json
+
+
+### addsheet
+post http://localhost:8080/addsheet
+Content-Type: application/json
+
+{
+   "AS_FILE":"java.doc", 
+   "AS_IMGCOVER":"1", 
+   "AS_IMGVIEW1":"2",
+   "AS_IMGVIEW2":"3", 
+   "AS_DESC":"Best java sheet",
+   "AS_PRICE":"80", 
+   "AS_PAGE":"99", 
+   "AS_DATETIME":"2019-11-23",
+   "S_ID":"1"
+}
+
+### edit
+put http://localhost:8080/edit/14
+Content-Type: application/json
+
+{
+   "AS_FILE":"Chinese 1", 
+   "AS_IMGCOVER":"", 
+   "AS_IMGVIEW1":"",
+   "AS_IMGVIEW2":"", 
+   "AS_DESC":"Best Chinese sheet",
+   "AS_PRICE":"20", 
+   "AS_PAGE":"30", 
+   "AS_DATETIME":"2018-05-16", 
+   "S_ID":"14"
+}
+
+### show all sheet of admin upload
+get http://localhost:8080/userselect
+Content-Type: application/json
+
+### On/Off
+put http://localhost:8080/toggle/1
+Content-Type: application/json
+
+### login
+post http://localhost:8080/login
+Content-Type: application/json
+
+{
+   "username":"tee",
+   "password":"1234"
+}
+
+### sign up
+post http://localhost:8080/signUp
+Content-Type: application/json
+
+{
+   "U_USERNAME":"seb",
+   "U_PASSWORD":"1234",
+   "U_NAME":"seb",
+   "U_PHONE":"99999",
+   "U_EMAIL":"asdsa@gmail.com",
+   "U_ROLE":"2",
+   "S_ID":"1"
+}
+
